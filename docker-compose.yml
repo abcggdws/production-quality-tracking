@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - APP_PORT=3001
+      - DATA_DIR=/app/backend/data
+    volumes:
+      - ./backend/data:/app/backend/data
+    restart: unless-stopped

@@ -1,0 +1,10 @@
+app:
+  host: 0.0.0.0
+  port: 3001
+
+db:
+  host: localhost
+  port: 5432
+  database: production_db
+  user: postgres
+  password: postgres

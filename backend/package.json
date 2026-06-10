@@ -1,0 +1,22 @@
+{
+  "name": "production-quality-tracking",
+  "version": "1.0.0",
+  "description": "Production Quality Tracking System",
+  "main": "dist/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --config jest.config.js",
+    "db:init": "npm run build && node dist/db/init.js",
+    "db:seed": "npm run build && node dist/db/seed.js"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.19.42",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.5",
+    "typescript": "^5.9.3"
+  }
+}
